@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f5f5;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
+  color: white;
+  padding: 20px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.main-content {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Builder Panel */
+.builder-panel {
+  flex: 0 0 400px;
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.builder-panel h2 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.builder-panel h3 {
+  margin: 25px 0 15px 0;
+  font-size: 14px;
+  color: #666;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-section input:focus {
+  outline: none;
+  border-color: #CC0000;
+}
+
+.item-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.item-name-input {
+  flex: 2;
+}
+
+.item-price-input {
+  flex: 1;
+}
+
+.remove-btn {
+  width: 30px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f0f0f0;
+  border: 1px dashed #999;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #e8e8e8;
+}
+
+.actions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.primary-btn {
+  padding: 12px;
+  background: #CC0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background: #990000;
+}
+
+.secondary-btn {
+  padding: 12px;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.secondary-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Preview Panel */
+.preview-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background: #e8e8e8;
+  border-radius: 8px;
+  min-height: 600px;
+}
+
+/* RECEIPT STYLES - PIXEL PERFECT TARGET RECEIPT */
+.receipt-container {
+  width: 340px;
+  background: #FFFFFF;
+  padding: 25px 20px;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #000000;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.target-logo {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 8px auto;
+  display: block;
+}
+
+.store-name {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.store-info {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.store-info div {
+  font-size: 10.5px;
+}
+
+.separator-heavy {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 0;
+  margin: 8px 0;
+  text-align: center;
+  line-height: 1;
+  white-space: pre;
+  color: #000000;
+}
+
+.separator-light {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 11px;
+  margin: 8px 0;
+  text-align: center;
+  line-height: 1;
+  white-space: pre;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+.date-time {
+  text-align: left;
+  margin: 8px 0;
+  font-size: 11px;
+}
+
+.register-info {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre;
+  tab-size: 4;
+}
+
+.items-section {
+  margin: 8px 0;
+}
+
+.item-line {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  font-size: 11px;
+}
+
+.item-name {
+  text-align: left;
+  flex: 1;
+}
+
+.item-price {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.totals-section {
+  margin: 8px 0;
+}
+
+.total-line {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.6;
+  font-size: 11px;
+}
+
+.total-bold {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* RedCard Section - NO BORDER */
+.redcard-section {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.redcard-header {
+  font-weight: 700;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+.redcard-percent {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.redcard-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  padding: 0 10px;
+  line-height: 1.4;
+}
+
+/* Return Policy - NOT UNDERLINED */
+.return-policy {
+  margin: 8px 0;
+}
+
+.return-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 10px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.return-text {
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+/* Barcode */
+.barcode-section {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.barcode-svg {
+  width: 100%;
+  height: 40px;
+}
+
+.barcode-number {
+  font-size: 12px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+/* Survey */
+.survey-section {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.survey-url {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 3px 0;
+}
+
+.survey-id {
+  font-size: 9px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-weight: 700;
+  font-size: 10px;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .builder-panel {
+    flex: none;
+    width: 100%;
+  }
+  
+  .preview-panel {
+    width: 100%;
+  }
+}
